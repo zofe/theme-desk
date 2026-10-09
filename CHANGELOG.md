@@ -2,6 +2,12 @@
 
 All notable changes to `zofe/theme-desk` will be documented in this file.
 
+## [0.1.1] - 2026-10-09
+
+Follows rapyd-admin 9.22: the layout views carry the application switcher
+(`rapyd.layout.apps`), which the theme shows exactly like the bundled look.
+Requires `zofe/rapyd-admin` ^9.22.
+
 ## [0.1.0] - 2026-10-09
 
 First release. The bundled rapyd-admin layout with the classic admin colours: blue sidebar

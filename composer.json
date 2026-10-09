@@ -6,7 +6,7 @@
     "keywords": ["rapyd-admin", "theme", "admin", "bootstrap", "laravel"],
     "require": {
         "php": "^8.2",
-        "zofe/rapyd-admin": "^9.21"
+        "zofe/rapyd-admin": "^9.22"
     },
     "autoload": {
         "psr-4": { "Zofe\\ThemeDesk\\": "src/" }

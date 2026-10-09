@@ -1,8 +1,8 @@
 {
     "name": "desk",
     "title": "Desk",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "The classic admin look: blue sidebar, off-white content, on the bundled rapyd-admin layout",
     "screenshot": "screenshot.png",
-    "rapyd-admin": "^9.21"
+    "rapyd-admin": "^9.22"
 }
