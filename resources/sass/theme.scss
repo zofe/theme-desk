@@ -1,0 +1,72 @@
+// Desk: the bundled rapyd-admin layout, recoloured.
+//
+// The layout reads its colours from CSS variables (docs/THEMES.md, "Design tokens"),
+// so the whole theme is the stylesheet of rapyd-admin plus the values below. No copy
+// of the layout SCSS to keep in step.
+@import "@rapyd/sass/rapyd";
+
+// html:not(.dark) e non :root: questi valori non devono raggiungere il tema scuro,
+// che ha fondali propri (il core li legge dagli stessi token).
+html:not(.dark) {
+    --bs-primary: #4e73df;
+    --bs-primary-rgb: 78, 115, 223;
+    --bs-link-color: #4e73df;
+    --bs-link-color-rgb: 78, 115, 223;
+    --bs-link-hover-color: #{color-mix(in srgb, #4e73df 80%, black)};
+
+    --rpd-sidebar-bg: #4e73df;
+    --rpd-sidebar-inner-bg: #{color-mix(in srgb, #4e73df 92%, black)};
+    --rpd-sidebar-active-bg: #{color-mix(in srgb, #4e73df 80%, black)};
+    --rpd-sidebar-border: rgba(255, 255, 255, .20);
+
+    --rpd-topbar-bg: #ffffff;
+    --rpd-content-bg: #f8f9fc;
+
+    --rpd-border-color: #dce1ea;
+    --bs-border-color: #dce1ea;
+    --bs-border-color-translucent: #dce1ea;
+    --bs-card-border-color: #dce1ea;
+    --bs-dropdown-border-color: #dce1ea;
+}
+
+// The sidebar is a solid colour: its text, icons and dividers go light.
+.sidebar,
+.sidebar .nav-link,
+.sidebar .nav-item .nav-link,
+.sidebar .nav-item .nav-link i,
+.sidebar .sidebar-brand,
+.sidebar .collapse-inner a,
+.sidebar .sidebar-heading {
+    color: #ffffff;
+}
+
+.sidebar #sidebarToggle {
+    background-color: rgba(255, 255, 255, .22);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .34);
+    }
+
+    &::after {
+        color: #ffffff;
+    }
+}
+
+.sidebar hr.sidebar-divider {
+    border-top-color: rgba(255, 255, 255, .20);
+    opacity: 1;
+}
+
+// Dark mode: a navy sidebar, the rest keeps the dark backgrounds of rapyd-admin.
+.dark {
+    --bs-primary: #{color-mix(in srgb, #4e73df 70%, white)};
+    --bs-link-color: #{color-mix(in srgb, #4e73df 70%, white)};
+
+    --rpd-sidebar-bg: #1f2a4d;
+    --rpd-sidebar-bg-fallback: #1f2a4d;
+    --rpd-sidebar-inner-bg: #{color-mix(in srgb, #1f2a4d 92%, black)};
+    --rpd-sidebar-active-bg: #{color-mix(in srgb, #1f2a4d 80%, black)};
+    --rpd-sidebar-border: rgba(255, 255, 255, .16);
+
+    --rpd-border-color: #39455c;
+}

@@ -1,0 +1,19 @@
+{
+    "name": "zofe/theme-desk",
+    "description": "Desk theme for rapyd-admin: the classic admin look (blue sidebar, off-white content) on the bundled layout.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["rapyd-admin", "theme", "admin", "bootstrap", "laravel"],
+    "require": {
+        "php": "^8.2",
+        "zofe/rapyd-admin": "^9.21"
+    },
+    "autoload": {
+        "psr-4": { "Zofe\\ThemeDesk\\": "src/" }
+    },
+    "extra": {
+        "laravel": { "providers": ["Zofe\\ThemeDesk\\ThemeServiceProvider"] }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
